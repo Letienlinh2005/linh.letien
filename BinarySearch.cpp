@@ -28,7 +28,7 @@ int main(){
     }
     sort(a, a+n);
     if(binarySearch(a, n, x)){
-        cout << "Found" << endl;
+        cout << "FOUND" << endl;
     }
     else{
         cout << "NOT FOUND" << endl;
