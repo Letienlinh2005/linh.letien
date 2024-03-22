@@ -26,6 +26,5 @@ int main(){
     else{
         cout << target << " không được tìm thấy trong mảng";
     }
-
     return 0;
 }
