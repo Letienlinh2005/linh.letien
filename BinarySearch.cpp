@@ -11,7 +11,6 @@ bool binarySearch (int a[], int n, int x){
         }
         else if(a[mid] < x){
             left = mid + 1;
-            
         }
         else{ // a[mid] > x
             right = mid - 1;
