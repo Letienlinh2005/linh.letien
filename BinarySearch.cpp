@@ -11,7 +11,6 @@ bool binarySearch (int a[], int n, int x){
         }
         else if(a[mid] < x){
             left = mid + 1;
-            
         }
         else{ // a[mid] > x
             right = mid - 1;
@@ -28,7 +27,7 @@ int main(){
     }
     sort(a, a+n);
     if(binarySearch(a, n, x)){
-        cout << "Found" << endl;
+        cout << "FOUND" << endl;
     }
     else{
         cout << "NOT FOUND" << endl;
