@@ -32,4 +32,5 @@ int main(){
     else{
         cout << "NOT FOUND" << endl;
     }
+    return 0;
 }
