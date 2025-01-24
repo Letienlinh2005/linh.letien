@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -50,3 +51,57 @@ body{
 
 
 
+=======
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#h-1{
+    color: red;
+    font-family: monospace;
+    font-size:30px
+}
+#h-1::after{
+    content: "❤️";
+}
+
+.paragraph{
+    font-family: monospace;
+    font-style: italic;
+    color:rgb(78, 26, 126);
+    text-align: left;
+    font-size: large;
+}
+.facebook, .instagram, .github, .phone {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 25px;
+    animation: fadeIn 1.8s ease-in-out;
+    color: black; 
+    transition: color 0.3s ease;
+}
+
+.facebook:hover, .instagram:hover, .github:hover, .phone:hover {
+    color: blue; 
+}
+
+.facebook:hover .fa-facebook, .instagram:hover .fa-instagram, .github:hover .fa-github, .phone:hover .fa-phone {
+    color: blue; 
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+body{
+    animation: fadeIn 1.8s ease-in-out;
+    text-align: center;
+    background-color: pink;
+}
+
+
+
+>>>>>>> origin/master
