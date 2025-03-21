@@ -1,107 +1,558 @@
-<<<<<<< HEAD
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-#h-1{
-    color: red;
-    font-family: monospace;
-    font-size:30px
-}
-#h-1::after{
-    content: "❤️";
-}
+/* =========================================
+   1. RESET & CÀI ĐẶT CHUNG
+   ========================================= */
 
-.paragraph{
-    font-family: monospace;
-    font-style: italic;
-    color:rgb(78, 26, 126);
-    text-align: left;
-    font-size: large;
-}
-.facebook, .instagram, .github, .phone {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 25px;
-    animation: fadeIn 1.8s ease-in-out;
-    color: black; 
-    transition: color 0.3s ease;
-}
-
-.facebook:hover, .instagram:hover, .github:hover, .phone:hover {
-    color: blue; 
-}
-
-.facebook:hover .fa-facebook, .instagram:hover .fa-instagram, .github:hover .fa-github, .phone:hover .fa-phone {
-    color: blue; 
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-body{
-    animation: fadeIn 1.8s ease-in-out;
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* =========================================
+     2. HEADER
+     ========================================= */
+  
+  #header {
+    width: 100%;
+    height: 222px;
+  }
+  
+  #top {
+    width: 100%;
+    height: 40px;
+    background-color: green;
+  }
+  
+  #top-content {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    line-height: 40px;
+    color: white;
+  }
+  
+  #top-left {
+    width: 60%;
+    height: 100%;
+    float: left;
+  }
+  
+  /* Khoảng cách phải 20px cho span đầu tiên */
+  .mr-20 {
+    margin-right: 20px;
+  }
+  
+  #top-right {
+    width: 40%;
+    height: 100%;
+    float: right;
+    text-align: right;
+  }
+  #top-right a{
+    text-decoration: none;
+    color:white;
+  }
+  
+  /* Text màu trắng (đặt cho các liên kết header) */
+  .white-text {
+    color: white;
+  }
+  
+  /* Banner */
+  #banner {
+    width: 100%;
+    height: 132px;
+    background-color: white;
+    padding-top: 50px;
+  }
+  
+  #banner-content {
+    width: 80%;
+    height: 82px;
+    margin: auto;
+  }
+  
+  #b1, #b2, #b3, #b4, #b5 {
+    width: 20%;
+    height: 100%;
+    float: left;
+  }
+  #b5{
+    background-color: orange;
     text-align: center;
-    background-color: pink;
-}
-
-
-
-=======
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-#h-1{
-    color: red;
-    font-family: monospace;
-    font-size:30px
-}
-#h-1::after{
-    content: "❤️";
-}
-
-.paragraph{
-    font-family: monospace;
-    font-style: italic;
-    color:rgb(78, 26, 126);
-    text-align: left;
-    font-size: large;
-}
-.facebook, .instagram, .github, .phone {
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 25px;
-    animation: fadeIn 1.8s ease-in-out;
-    color: black; 
-    transition: color 0.3s ease;
-}
-
-.facebook:hover, .instagram:hover, .github:hover, .phone:hover {
-    color: blue; 
-}
-
-.facebook:hover .fa-facebook, .instagram:hover .fa-instagram, .github:hover .fa-github, .phone:hover .fa-phone {
-    color: blue; 
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-body{
-    animation: fadeIn 1.8s ease-in-out;
+    height: 25px;
+    width:150px;
+    border-radius: 10px;
+  }
+  #b5 a{
+    text-decoration: none;
+    color:white;
+  }
+  
+  /* Ảnh full kích thước khối */
+  .full-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  #b2-left, #b3-left, #b4-left {
+    width: 25%;
+    height: 100%;
+    float: left;
+  }
+  
+  .img-mid {
+    margin-top: 26px; 
+  }
+  
+  #b2-right, #b3-right, #b4-right {
+    width: 75%;
+    height: 69px;
+    padding-top: 13px;
+    float: right;
+    line-height: 28px;
+  }
+  
+  /* Nút Giỏ Hàng */
+  .cart-btn {
+    margin-top: 23px; 
+    float: right;
+    border-radius: 130px;
+    line-height: 36px; 
+    height: 36px; 
+    display: block; 
     text-align: center;
-    background-color: pink;
+    width: 80%; 
+    background-color: orange; 
+    color: white; 
+    text-decoration: none;
+  }
+  
+  /* =========================================
+     3. MENU & DROPDOWN
+     ========================================= */
+  
+  /* Thanh menu chính */
+  #menu {
+    width: 100%;
+    background-color: #2f8f2f;
+    position: relative;
+    z-index: 999;
+}
+
+  
+  /* Khối căn giữa các items */
+  #menu-items {
+    width: 80%;
+    margin: 0 auto;
+}
+
+  
+  /* Menu cấp 1 hiển thị ngang */
+  #menu-items > ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Căn đều khoảng cách giữa các mục */
+}
+
+  
+  /* Li cấp 1 (cha) */
+  #menu-items > ul > li {
+    position: relative;    /* quan trọng để hiển thị submenu */
+  }
+  
+  /* Link menu cấp 1 */
+  #menu-items > ul > li > a {
+    padding: 12px 20px;   
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  /* Hiệu ứng hover trên mục menu chính */
+  #menu-items > ul > li:hover > a {
+    background-color: #ffc107; /* màu cam đậm */
+    color: #fff;
+  }
+  
+  /* Submenu (ul cấp 2) ẩn mặc định */
+  #menu-items ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #f8f8f8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: none;   /* ẩn sub-menu */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Khi hover li cha thì hiển thị ul con */
+  #menu-items ul li:hover > ul {
+    display: block;
+  }
+  
+  /* Li con trong sub-menu xếp dọc */
+  #menu-items ul ul li {
+    float: none;
+    border-bottom: 1px solid #ddd;
+
+  }
+  
+  /* Link trong sub-menu */
+  #menu-items ul ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    list-style: none;
+  }
+  
+  /* Hover sub-menu */
+  #menu-items ul ul li a:hover {
+    background-color: #eee;
+    color: #000;
+  }
+  
+  /* Mục cuối không cần border-bottom */
+  #menu-items ul ul li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Nếu muốn làm nổi bật mục đầu tiên (VD: Trang chủ) */
+  .li-active {
+    background-color: #ffc107;
+  }
+  
+  /* =========================================
+     4. CONTAINER & WRAPPER (Nội dung chính)
+     ========================================= */
+  
+  #container {
+    width: 100%;
+    min-height: 500px;
+    background-color: white;
+  }
+  
+  #wrapper {
+    width: 80%;
+    min-height: 500px;
+    margin: 30px auto;
+  }
+  
+  .wrapper-top {
+    width: 100%;
+    height: 412px;
+  }
+  
+  /* Sidebar */
+  #sidebar {
+    width: 25%;
+    height: 100%;
+    float: left; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  #sidebar h1 {
+    font-size: 14pt; 
+    background-color: green; 
+    color: white; 
+    line-height: 36px; 
+    text-align: center; 
+    border-radius: 10px; 
+    margin: 0;
+  }
+  
+  #sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  #sidebar ul li {
+    position: relative; 
+    line-height: 32px; 
+    border-bottom: 1px solid #ccc; 
+    padding: 0 15px;
+  }
+  
+  #sidebar ul li a {
+    text-decoration: none; 
+    color: #333;
+  }
+  
+  /* Sub-menu bên sidebar (nếu có) */
+  #sidebar ul li ul {
+    position: absolute;
+    top: -4px;
+    left: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    display: none;
+    width: 100px;
+    text-align: center;
+  }
+  #sidebar ul li:hover ul {
+    display: block;
+  }
+  
+  /* Slideshow */
+  #slideshow {
+    width: 72%;
+    height: 100%;
+    float: right;
+  }
+  
+  #slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #ads {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* Canh giữa nếu cần */
+}
+
+#ads img {
+    width: 100%; /* Co dãn theo chiều rộng màn hình */
+    height: auto; /* Chiều cao tự động tính toán để giữ đúng tỉ lệ */
+    max-width: 1200px; /* Đảm bảo ảnh không quá to trên màn hình lớn */
 }
 
 
+  /* Danh mục sản phẩm (catel, catel2, catel3) */
+  #catel, #catel2, #catel3 {
+    width: 100%;
+    margin-top: 30px;
+    height: auto; /* Cho phép mở rộng khi các items wrap xuống */
+    overflow: hidden; /* Ngăn tràn */
+}
+  
+  #catel h1, #catel2 h1, #catel3 h1 {
+    width: 300px;
+    font-size: 14pt; 
+    background-color: green;
+    color: white;
+    line-height: 40px; 
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
+  }
+  
+  .products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Đảm bảo wrap và đẩy xuống */
+    justify-content: space-between;
+    gap: 15px;
+}
 
->>>>>>> origin/master
+.items {
+    flex: 1 1 calc(25% - 15px); /* 4 cột trên màn hình lớn */
+    min-width: 220px; /* Đảm bảo không bị nhỏ quá */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ngăn nội dung tràn */
+}
+
+  
+  /* Item cuối cùng bỏ margin-right */
+  .items:last-child {
+    margin-right: 0;
+  }
+  
+  /* Ảnh sản phẩm */
+  .items img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+  .items a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Tên sản phẩm */
+  .prod-name {
+    text-decoration: none; 
+    color: green; 
+    font-weight: bold;
+  }
+  
+  /* Giá bán, giá cũ */
+  .price-orange {
+    font-weight: bold; 
+    font-size: 14pt; 
+    color: orange;
+  }
+  
+  .price-gray {
+    font-weight: bold; 
+    font-size: 14pt; 
+    color: gray;
+  }
+  
+  /* =========================================
+     5. FOOTER
+     ========================================= */
+  #footer{
+   height : 400px;
+   width : 100%; 
+   background-color: green;
+   clear: both;
+      
+  }
+  #Sp{
+    display: none;
+  }
+  #contact{
+    display: none;
+  }
+  #supports{
+      width: 100%;
+      float: right;
+  }
+  
+/* Mobile (dưới 768px) */
+@media screen and (max-width: 767px) {
+    body {
+        background-color: #f8f9fa;
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    #top-left{
+        display:none;
+    }
+    #top-right{
+        display:none;
+    }
+    .items {
+        flex: 1 1 calc(50% - 15px); /* Chia 2 cột */
+    }
+
+    #b2, #b3, #b4, #b5 {
+        display: none;
+    } 
+
+    /* Đảm bảo menu dãn đều, không bị bó hẹp */
+    #menu-items > ul {
+        display: flex;
+        justify-content: space-between; /* Các mục menu dãn đều */
+        width: 100%;
+    }
+
+    #menu-items > ul > li {
+        flex-grow: 1; /* Mục menu có thể mở rộng theo nội dung */
+        text-align: center; /* Căn giữa chữ */
+        min-width: 80px; /* Không nhỏ hơn 80px */
+    }
+
+    #menu-items > ul > li > a {
+        font-size: 14px;
+        padding: 10px 12px; /* Giảm khoảng cách để tránh bị chật */
+        display: block; /* Đảm bảo link full vùng bấm */
+        white-space: nowrap; /* Tránh chữ xuống dòng */
+    }
+    #sidebar ul {
+        display: none;
+    }
+
+    /* Khi hover vào "Danh mục" thì hiển thị ul */
+    #sidebar:hover ul {
+        display: block;
+    }
+
+    /* Giữ nguyên kích thước sidebar */
+    #sidebar {
+        width: 25%; /* Giữ kích thước ban đầu */
+        height: 100%;
+        float: left;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+    }
+
+    /* Căn chỉnh chữ "Danh mục" */
+    #sidebar h1 {
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* Hiển thị danh sách menu bên dưới khi hover */
+    #sidebar ul {
+        position: absolute;
+        width: 100%;
+        background: white;
+        border: 1px solid #ccc;
+        left: 0;
+        top: 50px; /* Để danh sách xuất hiện ngay dưới "Danh mục" */
+        z-index: 999;
+        border-radius: 5px;
+    }
+
+    /* Căn chỉnh mục trong danh sách */
+    #sidebar ul li {
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Sub-menu bên trong sidebar */
+    #sidebar ul li ul {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 150px;
+        background: white;
+        display: none;
+        border: 1px solid #ccc;
+    }
+
+    /* Hover vào mục chính thì hiển thị submenu */
+    #sidebar ul li:hover ul {
+        display: block;
+    }
+    
+    
+}
+
+@media screen and (max-width: 690px) {
+  
+  
+
+    #tel{
+        display:none;
+    }
+    .items {
+        flex: 1 1 100%; /* Hiển thị 1 cột */
+    }
+   }
+         
